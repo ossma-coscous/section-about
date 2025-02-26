@@ -3,7 +3,6 @@
 /* General Styles */
 body {
   font-family: "Ubuntu", sans-serif;
-  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
   display: flex;
@@ -23,7 +22,6 @@ h6 {
 
 .container {
   max-width: 1200px;
-  background: #fff;
   padding: 50px 20px;
   border-radius: 10px;
   text-align: center;
