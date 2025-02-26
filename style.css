@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* General Styles */
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  background: #fff;
+  padding: 50px 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.info {
+  animation: slideInFromTop 1s ease-out;
+
+}
+/* Text Animation (e.g., "Who am I") */
+.info h1 {
+  font-size: 3em;
+  color: #0056d2;
+  margin-bottom: 20px;
+  animation: slideInFromTop 1s ease-out;
+
+}
+@keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-50px); /* Start from the top */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Move to the original position */
+    }
+  }
+
+
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-100%); /* Start from the top (above the viewport) */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Move to the original position */
+    }
+  }
+.info h4 {
+  font-size: 1em;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideInFromTop 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.info p {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  gap: 35px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Profile Card Animation (Left to Right) */
+.profile {
+  background: #0056d2;
+  color: white;
+  padding: 60px;
+  width: 30%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile p {
+  font-size: 36px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.profile a {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin: 20px auto 0;
+  padding: 12px 30px;
+  color: white;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.profile a:hover {
+  background: white;
+  color: #0056d2;
+}
+
+/* Cards Section Animation (Bottom to Top) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 65%;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  text-align: left;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(120, 119, 119, 0.8);
+  border-bottom: 5px solid transparent;
+  animation: slideInFromBottom 1s ease-out;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.card:nth-child(1) {
+  border-bottom-color: #fba61b;
+}
+
+.card:nth-child(2) {
+  border-bottom-color: #0cc7d0;
+}
+
+.card:nth-child(3) {
+  border-bottom-color: #003ecb;
+}
+
+.card:nth-child(4) {
+  border-bottom-color: #f1c50e;
+}
+
+.card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+  animation: rotateOnce 1s ease-in-out; /* Rotate once on page load */
+}
+
+@keyframes rotateOnce {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card h4 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.card a:hover {
+  color: gray;
+}
+
+  /* Responsive Styles for Tablets (max-width: 800px) */
+  @media (max-width: 800px) {
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .content {
+      flex-direction: column;
+      align-items: stretch;
+      margin: 0;
+    }
+
+    .info {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .profile,
+    .cards {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .profile {
+      padding: 20px;
+      padding-block: 30px;
+      text-align: left;
+      background: #003ecb;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+
+    .profile img {
+        width: 255px;
+        height: 255px;
+      margin-bottom: 15px;
+    }
+
+    .profile p {
+      font-size: 36px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 0;
+    }
+
+    .card {
+      padding: 20px;
+    }
+
+    .card img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .card h4 {
+      font-size: 1.2rem;
+      margin: 0 0 5px 0;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 40px;
+  }
+
+  .info h1 {
+    font-size: 2em;
+  }
+
+  .info p {
+    font-size: 0.9em;
+    max-width: 300px;
+  }
+
+  .profile {
+    padding-inline: 23px;
+    border-radius: 0;
+    margin: auto;
+  }
+
+  .profile img {
+    max-width: 100%;
+    width: 255px;
+    height: 255px;
+  }
+
+  .profile p {
+    font-size: 30px;
+    max-width: 255px
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 40px;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card h4 {
+    display: none;
+  }
+  .card a {
+    margin-right: 200px;
+  }
+}
